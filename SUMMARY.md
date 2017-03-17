@@ -3,6 +3,9 @@
 ### Bob the Company
 * [Introduction](README.md)
 
+### Human Resources
+* [Culture](HR/culture.md)
+* [Employee Benefits]()
 
 ### Productivity
 * [Tools](Development/tool)
@@ -14,16 +17,18 @@
   * [Xcode](Development/keyboard_shortcuts.md#xcode)
   * [MacOS](Development/keyboard_shortcuts.md#mac_os)
 
+
 ### Document
 * [Markdown](Development/markdown.md)
-* [Formatting]()
+* [Protocols](Development/protocols.md)
 
 
 ### Collaboration
  * [Github Workflow]()
- * [Agile Development]()
+ * [Agile Development](Development/agile_development.md)
+ * [Coding Principles](Development/coding_principles.md)
 
-### Human Resources
+
 
 
 ### Finance

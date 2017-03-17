@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Markdown · GitBook</title>
+        <title>Coding Principles · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="protocols.html" />
     
-    
-    <link rel="prev" href="keyboard_shortcuts.html" />
+    <link rel="prev" href="agile_development.html" />
     
 
     </head>
@@ -261,7 +259,7 @@
         
         
     
-        <li class="chapter active" data-level="4.1" data-path="markdown.html">
+        <li class="chapter " data-level="4.1" data-path="markdown.html">
             
                 <a href="markdown.html">
             
@@ -320,7 +318,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.3" data-path="coding_principles.html">
+        <li class="chapter active" data-level="5.3" data-path="coding_principles.html">
             
                 <a href="coding_principles.html">
             
@@ -370,7 +368,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Markdown</a>
+        <a href=".." >Coding Principles</a>
     </h1>
 </div>
 
@@ -385,7 +383,80 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h1 id="coding-principles">Coding Principles</h1>
+<h2 id="solid">SOLID</h2>
+<p>A principle created by Robert Martin for Object Orietned Programming</p>
+<p>S    SRP[4]
+Single responsibility principle
+a class should have only a single responsibility (i.e. only one potential change in the software&apos;s specification should be able to affect the specification of the class)
+O    OCP[5]
+Open/closed principle
+&#x201C;software entities &#x2026; should be open for extension, but closed for modification.&#x201D;
+L    LSP[6]
+Liskov substitution principle
+&#x201C;objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.&#x201D; See also design by contract.
+I    ISP[7]
+Interface segregation principle
+&#x201C;many client-specific interfaces are better than one general-purpose interface.&#x201D;[8]
+D    DIP[9]
+Dependency inversion principle
+one should &#x201C;depend upon abstractions, [not] concretions.&#x201D;[8]</p>
+<h2 id="code-smell">Code Smell</h2>
+<p>Omen that causes bad future</p>
+<p>&#xC751;&#xC6A9; &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xC218;&#xC900;&#xC758; &#xC2A4;&#xBA5C;:</p>
+<p>&#xC911;&#xBCF5; &#xCF54;&#xB4DC;
+&#xC5B5;&#xC9C0;&#xB85C; &#xAFB8;&#xBBFC;&#xB4EF;&#xD55C; &#xBCF5;&#xC7A1;&#xC131;.
+&#xD074;&#xB798;&#xC2A4; &#xC218;&#xC900;&#xC758; &#xC2A4;&#xBA5C;:</p>
+<p>&#xCEE4;&#xB2E4;&#xB780; &#xD074;&#xB798;&#xC2A4;
+&#xAE30;&#xB2A5;&#xC5D0; &#xB300;&#xD55C; &#xC695;&#xC2EC;
+&#xBD80;&#xC801;&#xC808;&#xD55C; &#xAD00;&#xACC4;
+&#xAC70;&#xBD80;&#xB41C; &#xC720;&#xC0B0;
+&#xAC8C;&#xC73C;&#xB978; &#xD074;&#xB798;&#xC2A4;
+&#xB9AC;&#xD130;&#xB7F4;&#xC758; &#xACFC;&#xB3C4;&#xD55C; &#xC0AC;&#xC6A9;
+&#xC21C;&#xD658; &#xBCF5;&#xC7A1;&#xB3C4;
+&#xB2E4;&#xC6B4;&#xCE90;&#xC2A4;&#xD305;
+&#xACE0;&#xC544; &#xBCC0;&#xC218; &#xB610;&#xB294; &#xCEE8;&#xC2A4;&#xD134;&#xD2B8; &#xD074;&#xB798;&#xC2A4;
+&#xBA54;&#xC11C;&#xB4DC; &#xC218;&#xC900;&#xC758; &#xC2A4;&#xBA5C;:</p>
+<p>&#xB108;&#xBB34; &#xB9CE;&#xC740; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;
+&#xAE34; &#xBA54;&#xC11C;&#xB4DC;
+&#xACFC;&#xB3C4;&#xD558;&#xAC8C; &#xAE34; &#xC2DD;&#xBCC4;&#xC790;
+&#xACFC;&#xB3C4;&#xD558;&#xAC8C; &#xC9E7;&#xC740; &#xC2DD;&#xBCC4;&#xC790;
+&#xACFC;&#xB3C4;&#xD55C; &#xB370;&#xC774;&#xD130;&#xC758; &#xBC18;&#xD658;</p>
+<h3 id="kiss">Kiss</h3>
+<p>Keep it simple stupid
+Less code takes less time to write, has less bugs, and is easier to modify. Simplicity is the ultimate sophistication. It seems that perfection is reached not when there is nothing left to add, but when there is nothing left to take away.</p>
+<p>Avoid inheritance, polymorphism, dynamic binding and other complicated OOP concepts. Use delegation and simple if-constructs instead.
+Avoid low-level optimization of algorithms especially when involving Assembler, bit-operations, and pointers. Slower implementations will work just fine.
+Use simple brute-force solutions instead of complicated algorithms. Slower algorithms will work in the first place.
+Avoid numerous classes and methods as well as large code blocks (see More Is More Complex)
+For slightly unrelated but rather small pieces of functionality use private methods instead of an additional class.
+Avoid general solutions needing parameterization. A specific solution will suffice.</p>
+<h3 id="yagni">YAGNI</h3>
+<p>Avoid Creating a YAGNI (You aren&#x2019;t going to need it) - You should try not to add functionality until you need it.</p>
+<h3 id="minimize-coupling">Minimize Coupling</h3>
+<p>Any section of code (code block, function, class, etc) should minimize the dependencies on other areas of code. This is achieved by using shared variables as little as possible. &#x201C;Low coupling is often a sign of a well-structured computer system and a good design, and when combined with high cohesion, supports the general goals of high readability and maintainability&#x201D;</p>
+<p>Eliminate, minimise, and reduce complexity of necessary relationships.
+By hiding implementation details, coupling is reduced.
+Apply the Law of Demeter.</p>
+<h2 id="hide-implementation-detail">Hide Implementation Detail</h2>
+<p>Hiding implementation details allows change to the implementation of a code component while minimally affecting any other modules that use that component.
+Hide Implementation Details
+A software module hides information (i.e. implementation details) by providing an interface, and not leak any unnecessary information.</p>
+<p>Why</p>
+<p>When the implementation changes, the interface clients are using does not have to change.
+How</p>
+<p>Minimize accessibility of classes and members.
+Don&#x2019;t expose member data in public.
+Avoid putting private implementation details into a class&#x2019;s interface.
+Decrease coupling to hide more implementation details.</p>
+<h2 id="boy-scout-rule">Boy-Scout Rule</h2>
+<p>The Boy Scouts of America have a simple rule that we can apply to our profession: &#x201C;Leave the campground cleaner than you found it&#x201D;. The boy-scout rule states that we should always leave the code cleaner than we found it.</p>
+<p>Why</p>
+<p>When making changes to an existing codebase the code quality tends to degrade, accumulating technical debt. Following the boyscout rule, we should mind the quality with each commit. Technical debt is resisted by continuous refactoring, no matter how small.
+How</p>
+<p>With each commit make sure it does not degrade the codebase quality.
+Any time someone sees some code that isn&#x2019;t as clear as it should be, they should take the opportunity to fix it right there and then.</p>
+
                                 
                                 </section>
                             
@@ -412,14 +483,10 @@
 
             
                 
-                <a href="keyboard_shortcuts.html#mac_os" class="navigation navigation-prev " aria-label="Previous page: MacOS">
+                <a href="agile_development.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Agile Development">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="protocols.html" class="navigation navigation-next " aria-label="Next page: Protocols">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -428,7 +495,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Markdown","level":"4.1","depth":1,"next":{"title":"Protocols","level":"4.2","depth":1,"path":"Development/protocols.md","ref":"Development/protocols.md","articles":[]},"previous":{"title":"MacOS","level":"3.2.6","depth":2,"anchor":"#mac_os","path":"Development/keyboard_shortcuts.md","ref":"Development/keyboard_shortcuts.md#mac_os","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Development/markdown.md","mtime":"2017-03-17T09:31:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-17T10:23:08.116Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Coding Principles","level":"5.3","depth":1,"previous":{"title":"Agile Development","level":"5.2","depth":1,"path":"Development/agile_development.md","ref":"Development/agile_development.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Development/coding_principles.md","mtime":"2017-03-16T08:53:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-17T10:23:08.116Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
