@@ -11,3 +11,11 @@
  - Email
  - Trello
  - Slack
+
+## Dropbox
+ - Video Files
+ - Images
+
+## Google Drive
+ - Legal Documents
+ - Spreadsheet, and Google Doc, Form
